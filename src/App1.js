@@ -6,7 +6,7 @@ function App1() {
     const[totalpage,setTotalpage]=useState(0)
     const[posts,setPosts]=useState([])
     const [currentPage,setCurrentPage]=useState(1)
-    const [postsPerpage,setPostsPerpage]= useState(0)
+    const [setPostsPerpage]= useState(0)
 
     useEffect(()=>{
         const fetchPosts=async()=>{
