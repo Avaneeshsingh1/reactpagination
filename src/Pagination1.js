@@ -10,7 +10,7 @@ export const Pagination1 = ({totalpage,paginate}) => {
             <ul className='pagination'>
             {PageNumbers.map(number=>(
                 <li className="page-item">
-          <a onClick={()=>paginate(number)} href="!#" className="page-link">{number}</a>
+          <button onClick={()=>paginate(number)} className="page-link">{number} </button>
                 </li>
             ))}
             </ul>
