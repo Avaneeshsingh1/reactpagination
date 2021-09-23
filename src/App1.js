@@ -6,7 +6,7 @@ function App1() {
     const[totalpage,setTotalpage]=useState(0)
     const[posts,setPosts]=useState([])
     const [currentPage,setCurrentPage]=useState(1)
-    const [setPostsPerpage]= useState(0)
+    const [postsPerpage,setPostsPerpage]= useState(0)
 
     useEffect(()=>{
         const fetchPosts=async()=>{
@@ -16,10 +16,11 @@ function App1() {
           setTotalpage(res.data.total_pages)
           setPosts(res.data.data)
           setPostsPerpage(res.data.per_page)
-        }
+        } 
         fetchPosts()
       },[currentPage])
       const paginate=(pageNumber)=> setCurrentPage(pageNumber)
+      console.log(postsPerpage)
     return (
       <>
       <div className="container">
