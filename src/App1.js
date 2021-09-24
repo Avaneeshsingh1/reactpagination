@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import {Pagination1} from './Pagination1'
+import './App1.css'
 
 function App1() {
     const[totalpage,setTotalpage]=useState(0)
@@ -22,8 +23,8 @@ function App1() {
       const paginate=(pageNumber)=> setCurrentPage(pageNumber)
       console.log(postsPerpage)
     return (
-      <>
-      <div className="container">
+    <>
+      <div className="container grid">
         
         {posts.map(post=>{
       return  (
@@ -42,10 +43,15 @@ function App1() {
   </div>    
       )
   })}
+          
   </div>
-            
-          <Pagination1 totalpage={totalpage} paginate={paginate} />  
-        </>
+  <div className="container">
+              <Pagination1 totalpage={totalpage} paginate={paginate} />
+              </div>
+
+   </>         
+  
+        
     )
 }
 
